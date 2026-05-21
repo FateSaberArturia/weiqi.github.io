@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/css.css"/>
+     <title>三连星围棋_少儿围棋_邯郸围棋_围棋培训_学围棋-邯郸三连星围棋俱乐部</title>
+    <meta name="keywords"  content="邯郸围棋,围棋培训班,围棋哪家好,三连星围棋,围棋怎么样,邯郸三连星,围棋,少儿围棋,围棋培训,启蒙围棋,学围棋" />
+    <meta name="description" content="邯郸三连星围棋从事围棋,少儿围棋,学围棋,围棋培训【微信:hdslxwq50 手机13230055386】以提供邯郸围棋培训为核心,利用围棋培训,快速掌握围棋技术." />
+</head>
+
+<body>
+<!--头部-->
+<div id="head">
+  <div class="h-top1">
+    	<div class="h-100">
+   		 <div class="nav">
+            	<div class="logo"><img src="images/logo.png" width="255" height="55"></div>
+                <div class="n-nav">
+                		<ul>
+                        		<li ><a href="index.html">首页</a></li>
+                                <li><a href="qyjj.html">棋院简介</a></li>
+                                 <li><a href="qydt.html">棋院动态</a></li>
+                                  <li ><a href="jxkc.html">教学课程</a></li>
+                                   <li><a href="xxhj.html">学习环境</a></li>
+                                    <li ><a href="jsfc.html">教师风采</a></li>
+                                     <li><a href="zspj.html">教学理念</a></li>
+                                      <li class="xz"><a href="lxwm.html">联系我们</a></li>
+                        </ul>
+                        <div class="cls"></div>
+                </div>
+                <div class="n-dh"><img src="images/dh.png" width="26" height="26">13230055386</div>
+                <div class="cls"></div>
+            </div>
+     	</div>
+    <!--轮播-->
+  <div class="banner">
+  		<!--<div class="c-1200px"><span class="c-bm1"><a href="wybm.html">我 要 报 名</a></span></div>-->
+        
+  </div>
+	  
+    </div>
+    
+</div>
+<!--内容-->
+<div id="content">
+  <div class="c-1180px">
+  <div class="c-1180px1">
+  		<div class="a-top">
+        	<span class="lx"><img src="images/a-1.png" width="32" height="29">
+            <p style="margin-top:7px;">13230055386</p></span>
+            <span class="lx" style="margin-right:0;"><img src="images/a-2.png" width="38" height="35">
+            <p>hdslxwq50</p></span>
+          <div class="cls"></div>
+            <span class="lx"><img src="images/a-3.png" width="28" height="33">
+            <p>850370378</p></span>
+            <span class="lx" style="margin-right:0;"><img src="images/a-4.png" width="34" height="24">
+            <p style="margin-top:7px;">745596470@qq.com</p></span>
+            <div class="cls"></div>
+             <span class="lx1">地址：邯郸市邯山区卓立大厦17楼1718室</span>
+        </div>
+        <div class="a-top1"><img src="images/2wm1.png" width="183" height="183"></div>
+        <div class="cls"></div>
+         <!--百度地图容器-->
+       <div class="dt" id="map"></div>
+         <!--<div class="mac"><img src="images/MAC.png"></div>-->
+  </div>
+        		
+                
+        		
+                <div class="cls"></div>
+        </div>
+</div>
+<!--尾部-->
+<div id="foot">
+	<div class="f-1180px">
+    	2021  <a href="https://beian.miit.gov.cn/" >冀ICP备2021009645号-1</a> 邯郸三连星围棋  
+            <p>联系地址：邯郸市邯山区卓立大厦17楼1718室 | 联系电话：13230055386</p>
+    </div>
+</div>
+</body>
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/slider.js"></script>
+  <!--引用百度地图API-->
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=8M7PelSY73PQIGxsDHmT4XUi
+"></script>
+<script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+      createMap();//创建地图
+      setMapEvent();//设置地图事件
+      addMapControl();//向地图添加控件
+      addMapOverlay();//向地图添加覆盖物
+    }
+    function createMap(){ 
+      map = new BMap.Map("map"); 
+      map.centerAndZoom(new BMap.Point(114.497966,36.600807),18);
+    }
+    function setMapEvent(){
+      map.enableScrollWheelZoom();
+      map.enableKeyboard();
+    }
+    function addClickHandler(target,window){
+      target.addEventListener("click",function(){
+        target.openInfoWindow(window);
+      });
+    }
+    function addMapOverlay(){
+      var markers = [
+        {content:"邯郸三连星围棋",title:"邯郸三连星围棋",imageOffset: {width:0,height:3},position:{lat:36.600807,lng:114.497966}}
+      ];
+      for(var index = 0; index < markers.length; index++ ){
+        var point = new BMap.Point(markers[index].position.lng,markers[index].position.lat);
+        var marker = new BMap.Marker(point,{icon:new BMap.Icon("http://api.map.baidu.com/lbsapi/createmap/images/icon.png",new BMap.Size(20,25),{
+          imageOffset: new BMap.Size(markers[index].imageOffset.width,markers[index].imageOffset.height)
+        })});
+        var label = new BMap.Label(markers[index].title,{offset: new BMap.Size(25,5)});
+        var opts = {
+          width: 200,
+          title: markers[index].title,
+          enableMessage: false
+        };
+        var infoWindow = new BMap.InfoWindow(markers[index].content,opts);
+        marker.setLabel(label);
+        addClickHandler(marker,infoWindow);
+        map.addOverlay(marker);
+      };
+    }
+    //向地图添加控件
+    function addMapControl(){
+      var scaleControl = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+      scaleControl.setUnit(BMAP_UNIT_METRIC);
+      map.addControl(scaleControl);
+      var navControl = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:1});
+      map.addControl(navControl);
+      var overviewControl = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:true});
+      map.addControl(overviewControl);
+    }
+    var map;
+      initMap();
+  </script>
+
+</html>
