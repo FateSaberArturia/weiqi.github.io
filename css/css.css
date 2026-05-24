@@ -589,3 +589,111 @@ ul, ol {
     .bn-right { width: 100%; float: none; }
     .a-top { width: 100%; padding: 30px; }
 }
+
+
+/* 赛事回顾板块 */
+.event-review {
+    background: #f9f9f9;
+    padding: 25px;
+    border-left: 4px solid #b3b3b3;
+    margin-top: 30px;
+    margin-left:50px;
+    width:1060px;
+    overflow: hidden;
+}
+
+.event-review .event-title {
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.event-review p {
+    line-height: 2;
+    text-indent: 2em;
+    color: var(--secondary);
+    margin-bottom: 15px;
+}
+
+.event-review .event-img {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.event-review .event-img img {
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+.event-review .event-img span {
+    display: block;
+    color: var(--grey);
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+/* 微信咨询页 */
+.wx-consult {
+    text-align: center;
+    padding: 40px 30px;
+}
+
+.wx-consult .wx-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.wx-consult .wx-subtitle {
+    font-size: 16px;
+    color: var(--grey);
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.wx-consult .wx-qrcode {
+    display: inline-block;
+    padding: 15px;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.wx-consult .wx-qrcode img {
+    width: 200px;
+    height: 200px;
+    display: block;
+}
+
+.wx-consult .wx-tip {
+    font-size: 15px;
+    color: var(--secondary);
+    margin-top: 15px;
+    line-height: 2;
+}
+
+.wx-consult .wx-tip strong {
+    color: #d33124;
+}
+
+.wx-consult .wx-features {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.wx-consult .wx-features .feature-item {
+    text-align: center;
+    color: var(--secondary);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.wx-consult .wx-features .feature-item .icon {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
